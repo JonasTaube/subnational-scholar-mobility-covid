@@ -73,6 +73,7 @@ Run in this order. Each writes into `03_分析与图表/results/` and/or `figure
 | `analysis_robustness.py` | Scopus replication; 2022 endpoint; region-size × year, field-composition, country × year FE, region linear trends; trajectory denominator / endpoint sensitivities; class diagnostics; coverage diagnostics; China check → `robustness.json` |
 | `analysis_robustness2.py` | Primary trajectory classification with a **2022-only** post window, mean/median/IQR and sign shares, absolute net-loss targeting stats; country × year FE diagnostics; cross-source comparability; regenerates Figure 3 → `robustness_round2.json` |
 | `analysis_robustness3.py` | Clustering-level robustness: identical linear predictors re-estimated with a region-level vs a country-level sandwich → `robustness_round3.json` |
+| `analysis_robustness4.py` | Full 2 × 2 cross of trajectory denominator × post window, plus agreement rates and the Scopus classification on the primary window → `robustness_round4.json` |
 | `verify_revision_facts.py` | Standalone re-check of sample sizes, the 2022 total, and DID significance |
 
 ```bash
@@ -80,6 +81,7 @@ python analysis_core.py
 python analysis_robustness.py
 python analysis_robustness2.py
 python analysis_robustness3.py
+python analysis_robustness4.py
 ```
 
 Environment: Python 3.13, `numpy`, `pandas`, `pyarrow`, `matplotlib`.
@@ -135,7 +137,15 @@ in-migration counts are heavily right-skewed.
    2021 (p = 0.115) and 2024 (p = 0.090) fall below conventional thresholds;
    2022 (p = 0.013) and 2023 (p = 0.005) survive. The precise significance of the
    later years should not be over-read.
-4. Region fixed effects absorb only **time-invariant** region-level confounding;
+4. **Dropping single-region countries changes nothing.** Of the 1,711 panel
+   regions, 1,662 (97.1%) sit in the 142 countries that contribute at least two
+   regions; restricting to those countries reproduces the baseline almost exactly
+   (+0.013 / +0.029 / +0.060 / +0.076 / +0.059), so the collapse of the gradient
+   under country × year FE is not an artefact of discarded observations. Within
+   multi-region countries the SD of exposure across regions has a median of 0.111
+   (IQR 0.069–0.166) against 0.261 across all regions — about 40% of the variation
+   survives removing country means, and it carries no pandemic-specific signal.
+5. Region fixed effects absorb only **time-invariant** region-level confounding;
    they say nothing about time-varying confounders such as funding, visa policy,
    or institute-level hiring freezes.
 
@@ -173,6 +183,24 @@ or sender in absolute terms. The diagnostics file makes this concrete — e.g. 3
 of regions in the *Relative persistent improvement* class had a **negative**
 pre-pandemic net rate, and 13% were still negative in 2022.
 
+**Post window.** The primary classification uses **2022 alone**, because it is the
+last year covered by the bilateral flows files and the year least affected by
+right truncation; a 2022–2024 variant is reported alongside it everywhere.
+Sensitivity is asymmetric: the classification is nearly invariant to the
+denominator (99.5% agreement when the 2019 population replaces the 2015–2019 mean)
+and materially sensitive to the window (77.4%), with the disagreement concentrated
+between the improvement and reversal classes.
+
+**Absolute versus relative.** Because the labels are relative, they are a poor
+targeting rule on their own. In 2022, 702 of 1,714 classified regions (41.0%) had a
+negative net rate and together lost about 61,000 events; 371 of those regions are
+in the relatively declining class but 74 are in the relatively improving class.
+The largest absolute losses are large hubs — England (−5,174), Beijing (−2,013),
+Tehran province (−1,481), New York state (−1,216), Île-de-France (−1,079) — and
+Beijing is explicitly classified as *relatively improving*. See
+`results/robustness_round2.json` and the `Policy_Targets` sheet of the manuscript
+workbook.
+
 ---
 
 ## 4. Outputs
@@ -190,6 +218,7 @@ results/
   robust_*.csv                       trajectory sensitivity variants
   robustness_round2.json             primary classification, country×year diagnostics, cross-source
   robustness_round3.json             clustering-level robustness
+  robustness_round4.json             denominator × post-window sensitivity matrix
   traj_primary_2022_*.csv            primary classification (post window = 2022)
   traj_alt_2022_2024_*.csv           alternative classification (post window = 2022–2024)
 figures/
@@ -199,6 +228,29 @@ figures/
 Figure conventions: Times New Roman, `pdf.fonttype = 42` (editable embedded
 TrueType), single-column width 7.2 in, no titles inside the figure area
 (captions live in the manuscript).
+
+---
+
+## 6. A note on the reference list
+
+The manuscript's 11 references were each resolved against a DOI registration
+agency. Two errors were found and fixed this way, and both are worth recording
+because they are the failure modes that citation checks are supposed to catch:
+
+* one entry carried a DOI that was **never registered** — `10.3278/7004002xew001`
+  returns 404 from the DOI handle API and is absent from CrossRef and DataCite.
+  The registered variant of that wbv chapter is `10.3278/7004002xw001`; we instead
+  cite the same author's English preprint (`10.31235/osf.io/6h5nv_v2`), which is
+  quantitative and directly on topic;
+* one entry had the **wrong author and title** — the NBER working paper 32622 is
+  by Robert Flynn, Britta Glennon, Raviv Murciano-Goroff and Jiusi Xiao, and its
+  title ends "International Scientific Research"; it does have a registered DOI
+  (`10.3386/w32622`), contrary to the "no DOI for NBER working papers" assumption
+  that had left the field blank.
+
+Re-run `check_doi` in `code/analysis_robustness4.py`'s sibling logic, or simply
+resolve each DOI in the handle API, before submitting anything downstream of this
+list.
 
 ---
 

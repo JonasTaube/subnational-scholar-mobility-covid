@@ -1,0 +1,83 @@
+{
+ "denom_pre_window2022": {
+  "n": 1714,
+  "counts": {
+   "persistent_improvement": 581,
+   "persistent_decline": 528,
+   "reversal": 327,
+   "temp_rebound": 278
+  },
+  "shares": {
+   "persistent_improvement": 0.339,
+   "persistent_decline": 0.308,
+   "reversal": 0.191,
+   "temp_rebound": 0.162
+  }
+ },
+ "denom_pre_window2022_2024": {
+  "n": 1714,
+  "counts": {
+   "persistent_improvement": 569,
+   "persistent_decline": 543,
+   "reversal": 339,
+   "temp_rebound": 263
+  },
+  "shares": {
+   "persistent_improvement": 0.332,
+   "persistent_decline": 0.317,
+   "reversal": 0.198,
+   "temp_rebound": 0.153
+  }
+ },
+ "denom_2019_window2022": {
+  "n": 1714,
+  "counts": {
+   "persistent_improvement": 576,
+   "persistent_decline": 529,
+   "reversal": 330,
+   "temp_rebound": 279
+  },
+  "shares": {
+   "persistent_improvement": 0.336,
+   "persistent_decline": 0.309,
+   "reversal": 0.193,
+   "temp_rebound": 0.163
+  }
+ },
+ "denom_2019_window2022_2024": {
+  "n": 1714,
+  "counts": {
+   "persistent_improvement": 567,
+   "persistent_decline": 543,
+   "reversal": 339,
+   "temp_rebound": 265
+  },
+  "shares": {
+   "persistent_improvement": 0.331,
+   "persistent_decline": 0.317,
+   "reversal": 0.198,
+   "temp_rebound": 0.155
+  }
+ },
+ "agreement denom_pre_window2022 vs denom_2019_window2022": [
+  0.9953,
+  1714
+ ],
+ "agreement denom_pre_window2022 vs denom_pre_window2022_2024": [
+  0.7742,
+  1714
+ ],
+ "agreement denom_pre_window2022_2024 vs denom_2019_window2022_2024": [
+  0.9977,
+  1714
+ ],
+ "scopus_window2022": {
+  "n": 1500,
+  "counts": {
+   "persistent_decline": 513,
+   "persistent_improvement": 469,
+   "reversal": 263,
+   "temp_rebound": 255
+  }
+ }
+}
