@@ -1,0 +1,5 @@
+class,n,mean_pre,mean_shock,mean_post,med_pre,med_post,q1_post,q3_post,share_pre_neg,share_post_neg,share
+Improvement then reversal,339,14.0,40.08,-9.99,7.51,-7.64,-18.65,3.46,0.32,0.67,0.198
+Relative persistent decline,543,17.48,-5.15,-7.07,9.37,-6.62,-17.64,4.22,0.24,0.65,0.317
+Relative persistent improvement,569,6.14,40.16,46.58,4.47,25.35,6.02,64.21,0.41,0.15,0.332
+"Temporary decline, rebounded",263,11.57,-9.81,38.16,7.18,21.46,4.93,57.9,0.35,0.19,0.153

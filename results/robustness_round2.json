@@ -1,0 +1,355 @@
+{
+ "primary_counts": {
+  "Relative persistent improvement": 581,
+  "Relative persistent decline": 528,
+  "Improvement then reversal": 327,
+  "Temporary decline, rebounded": 278
+ },
+ "alt_counts": {
+  "Relative persistent improvement": 569,
+  "Relative persistent decline": 543,
+  "Improvement then reversal": 339,
+  "Temporary decline, rebounded": 263
+ },
+ "primary_n": 1714,
+ "primary_diag": [
+  {
+   "class": "Relative persistent improvement",
+   "n": 581,
+   "mean_pre": 9.13,
+   "mean_shock": 43.68,
+   "mean_post": 61.16,
+   "med_pre": 5.72,
+   "med_post": 34.53,
+   "q1_post": 8.89,
+   "q3_post": 83.27,
+   "share_pre_neg": 0.37,
+   "share_post_neg": 0.13,
+   "share": 0.339
+  },
+  {
+   "class": "Relative persistent decline",
+   "n": 528,
+   "mean_pre": 14.89,
+   "mean_shock": -7.3,
+   "mean_post": -16.15,
+   "med_pre": 8.23,
+   "med_post": -9.78,
+   "q1_post": -24.62,
+   "q3_post": 1.2,
+   "share_pre_neg": 0.27,
+   "share_post_neg": 0.7,
+   "share": 0.308
+  },
+  {
+   "class": "Improvement then reversal",
+   "n": 327,
+   "mean_pre": 8.97,
+   "mean_shock": 33.82,
+   "mean_post": -20.27,
+   "med_pre": 4.47,
+   "med_post": -11.42,
+   "q1_post": -31.15,
+   "q3_post": 0.01,
+   "share_pre_neg": 0.38,
+   "share_post_neg": 0.7,
+   "share": 0.191
+  },
+  {
+   "class": "Temporary decline, rebounded",
+   "n": 278,
+   "mean_pre": 16.8,
+   "mean_shock": -5.49,
+   "mean_post": 52.69,
+   "med_pre": 10.55,
+   "med_post": 30.29,
+   "q1_post": 10.49,
+   "q3_post": 74.7,
+   "share_pre_neg": 0.27,
+   "share_post_neg": 0.1,
+   "share": 0.162
+  }
+ ],
+ "alt_diag": [
+  {
+   "class": "Relative persistent improvement",
+   "n": 569,
+   "mean_pre": 6.14,
+   "mean_shock": 40.16,
+   "mean_post": 46.58,
+   "med_pre": 4.47,
+   "med_post": 25.35,
+   "q1_post": 6.02,
+   "q3_post": 64.21,
+   "share_pre_neg": 0.41,
+   "share_post_neg": 0.15,
+   "share": 0.332
+  },
+  {
+   "class": "Relative persistent decline",
+   "n": 543,
+   "mean_pre": 17.48,
+   "mean_shock": -5.15,
+   "mean_post": -7.07,
+   "med_pre": 9.37,
+   "med_post": -6.62,
+   "q1_post": -17.64,
+   "q3_post": 4.22,
+   "share_pre_neg": 0.24,
+   "share_post_neg": 0.65,
+   "share": 0.317
+  },
+  {
+   "class": "Improvement then reversal",
+   "n": 339,
+   "mean_pre": 14.0,
+   "mean_shock": 40.08,
+   "mean_post": -9.99,
+   "med_pre": 7.51,
+   "med_post": -7.64,
+   "q1_post": -18.65,
+   "q3_post": 3.46,
+   "share_pre_neg": 0.32,
+   "share_post_neg": 0.67,
+   "share": 0.198
+  },
+  {
+   "class": "Temporary decline, rebounded",
+   "n": 263,
+   "mean_pre": 11.57,
+   "mean_shock": -9.81,
+   "mean_post": 38.16,
+   "med_pre": 7.18,
+   "med_post": 21.46,
+   "q1_post": 4.93,
+   "q3_post": 57.9,
+   "share_pre_neg": 0.35,
+   "share_post_neg": 0.19,
+   "share": 0.153
+  }
+ ],
+ "absolute": {
+  "n_regions_negative_post_rate": 702,
+  "share_of_classified": 0.41,
+  "n_regions_negative_post_net_flow": 702,
+  "total_net_loss_2022_among_negatives": 61002,
+  "of_which_improvement_class": 74,
+  "of_which_decline_class": 371
+ },
+ "top_absolute_losers_2022": [
+  {
+   "area": "GB.ENG",
+   "net_2022": -5174
+  },
+  {
+   "area": "CN.BJ",
+   "net_2022": -2013
+  },
+  {
+   "area": "IR.23",
+   "net_2022": -1481
+  },
+  {
+   "area": "US.NY",
+   "net_2022": -1216
+  },
+  {
+   "area": "FR.IDF",
+   "net_2022": -1079
+  },
+  {
+   "area": "US.MI",
+   "net_2022": -1040
+  },
+  {
+   "area": "TR.06",
+   "net_2022": -980
+  },
+  {
+   "area": "US.MD",
+   "net_2022": -968
+  },
+  {
+   "area": "CN.HL",
+   "net_2022": -949
+  },
+  {
+   "area": "CA.ON",
+   "net_2022": -883
+  }
+ ],
+ "cy_diag": {
+  "n_regions": 1711,
+  "n_countries": 191,
+  "countries_with_ge2_regions": 142,
+  "share_regions_in_multiregion_countries": 0.971,
+  "countries_with_1_region": 49,
+  "within_country_exposure_sd_median": 0.1107,
+  "within_country_exposure_sd_q1": 0.0691,
+  "within_country_exposure_sd_q3": 0.1657
+ },
+ "multi_country_only_did": {
+  "2015": [
+   0.0043,
+   0.0149
+  ],
+  "2016": [
+   -0.0082,
+   0.0125
+  ],
+  "2017": [
+   0.0067,
+   0.0112
+  ],
+  "2018": [
+   0.0046,
+   0.0096
+  ],
+  "2020": [
+   0.0134,
+   0.0089
+  ],
+  "2021": [
+   0.0294,
+   0.0099
+  ],
+  "2022": [
+   0.0598,
+   0.0114
+  ],
+  "2023": [
+   0.0759,
+   0.0126
+  ],
+  "2024": [
+   0.0585,
+   0.0144
+  ]
+ },
+ "multi_country_only_n": 1662,
+ "baseline_country_clustered": {
+  "2015": [
+   0.948,
+   0.0735
+  ],
+  "2016": [
+   0.9387,
+   0.0694
+  ],
+  "2017": [
+   0.9485,
+   0.0691
+  ],
+  "2018": [
+   0.9433,
+   0.0694
+  ],
+  "2020": [
+   0.952,
+   0.066
+  ],
+  "2021": [
+   0.9634,
+   0.0654
+  ],
+  "2022": [
+   0.9908,
+   0.0667
+  ],
+  "2023": [
+   1.0134,
+   0.0685
+  ],
+  "2024": [
+   0.9973,
+   0.0699
+  ]
+ },
+ "country_year_region_clustered": {
+  "2015": [
+   0.0822,
+   0.0238
+  ],
+  "2016": [
+   0.0392,
+   0.0233
+  ],
+  "2017": [
+   0.0682,
+   0.0232
+  ],
+  "2018": [
+   0.0478,
+   0.0194
+  ],
+  "2020": [
+   0.012,
+   0.0182
+  ],
+  "2021": [
+   -0.0095,
+   0.0181
+  ],
+  "2022": [
+   0.0105,
+   0.0204
+  ],
+  "2023": [
+   0.0009,
+   0.02
+  ],
+  "2024": [
+   -0.0098,
+   0.0225
+  ]
+ },
+ "country_year_country_clustered": {
+  "2015": [
+   1.3789,
+   0.0944
+  ],
+  "2016": [
+   1.336,
+   0.0945
+  ],
+  "2017": [
+   1.365,
+   0.0957
+  ],
+  "2018": [
+   1.3446,
+   0.0973
+  ],
+  "2020": [
+   1.3088,
+   0.0937
+  ],
+  "2021": [
+   1.2873,
+   0.0951
+  ],
+  "2022": [
+   1.3072,
+   0.0968
+  ],
+  "2023": [
+   1.2977,
+   0.0995
+  ],
+  "2024": [
+   1.287,
+   0.101
+  ]
+ },
+ "cross_source": {
+  "regions_openalex": 2073,
+  "regions_scopus": 2065,
+  "regions_shared": 554,
+  "share_openalex_also_scopus": 0.267,
+  "countries_openalex": 196,
+  "countries_scopus": 214,
+  "n_regions_common_pop20": 489,
+  "corr_region_log_change_2019_2022": 0.203,
+  "event_ratio_2019": 5.1
+ }
+}

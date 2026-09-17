@@ -1,0 +1,8 @@
+# raw SMD 2.0 Parquet files are obtained from the Zenodo record, not committed
+01_原始数据/
+*.parquet
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+~$*
